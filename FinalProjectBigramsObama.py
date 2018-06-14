@@ -1,83 +1,5 @@
-import numpy as np
-import igraph
-import pickle
-import requests
 
-import opengraph
-import pprint
-import csv
-import numpy as np
-import igraph
-import pickle
-import requests
-import opengraph
-import pprint
-import csv
-import pylab
-import graphlab
-import numpy as np
-import igraph
-import pickle
-import requests
-import opengraph
-import pprint
-import csv
-import pickle
-import twitter
-import logging
-import time
-import jpype
-import numpy as np
-import igraph
-import pickle
-import requests
-import opengraph
-import pprint
-import csv
-import logging
-import cairocffi as cairo 
-from collections import defaultdict
-import graphlab as gl
-import pylab
 
-import nltk
-import pandas as pd
-import numpy as np
-import re
-import random
-import string 
-import prettytable
-import nltk
-import pickle
-import prettytable
-from collections import defaultdict
-import textblob
-import math
-import re
-from bs4 import BeautifulSoup
-import csv 
-
-from sklearn.pipeline import Pipeline
-from sklearn.decomposition import TruncatedSVD
-from sklearn.preprocessing import StandardScaler
-from sklearn.svm import SVC
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.feature_extraction import text
-
-from nltk.stem.porter import PorterStemmer
-from nltk.stem.snowball import SnowballStemmer
-from nltk.stem.wordnet import WordNetLemmatizer
-from sklearn import decomposition, pipeline, metrics, grid_search
-from nltk.corpus import stopwords
-
-from collections import Counter
-import pickle
-import twitter
-import logging
-import time
-from collections import defaultdict
-
-# Hide some silly output
 
 import logging
 logging.getLogger("requests").setLevel(logging.WARNING)
@@ -87,10 +9,10 @@ logging.getLogger("requests").setLevel(logging.WARNING)
 import twitter
 import prettytable
 
-api = twitter.Api(consumer_key='oBpA2LLQwv90bvMaChYs9o91F',
-                consumer_secret='Jv14NpZ03qx1WQfTPVpzJZf7vP3uipwqtS7OSFXxKmuYQdGhFx',
-                access_token_key='733478864530219008-sh2XNPjVwIt7XVyD0kU9LBJR77R25jw',
-                access_token_secret='z5ktoi3sxHghfyKZxAXQpjkmLYNLTYGoFZIK9q8XCVRTp')
+api = twitter.Api(consumer_key='',
+                consumer_secret='',
+                access_token_key='-',
+                access_token_secret='')
 
 # Grab FAIR's tweet stream
 #
