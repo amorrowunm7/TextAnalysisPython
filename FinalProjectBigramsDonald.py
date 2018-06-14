@@ -48,10 +48,10 @@ logging.getLogger("requests").setLevel(logging.WARNING)
 
 #load the Twitter API
 
-api = twitter.Api(consumer_key='oBpA2LLQwv90bvMaChYs9o91F',
-                consumer_secret='Jv14NpZ03qx1WQfTPVpzJZf7vP3uipwqtS7OSFXxKmuYQdGhFx',
-                access_token_key='733478864530219008-sh2XNPjVwIt7XVyD0kU9LBJR77R25jw',
-                access_token_secret='z5ktoi3sxHghfyKZxAXQpjkmLYNLTYGoFZIK9q8XCVRTp')
+api = twitter.Api(consumer_key='',
+                consumer_secret='',
+                access_token_key='',
+                access_token_secret='')
 
 # Grab tweet stream
 
