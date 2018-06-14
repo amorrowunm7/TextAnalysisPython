@@ -1,61 +1,28 @@
-import numpy as np
-import igraph
-import pickle
-import requests
 
-import opengraph
-import pprint
-import csv
+
 import numpy as np
 import igraph
 import pickle
 import requests
 import opengraph
 import pprint
-import csv
 import pylab
 import graphlab
-import numpy as np
-import igraph
-import pickle
-import requests
-import opengraph
-import pprint
-import csv
-import pickle
 import twitter
+import jpype
+import cairocffi as cairo from collections 
+import defaultdict
+import graphlab as gl
+import nltkimport pandas as pd
+import reimport random
+import string
+import prettytable
+import textblob
+import mathfrom bs4
+import BeautifulSoup
+import csv
 import logging
 import time
-import jpype
-import numpy as np
-import igraph
-import pickle
-import requests
-import opengraph
-import pprint
-import csv
-import logging
-import cairocffi as cairo 
-from collections import defaultdict
-import graphlab as gl
-import pylab
-
-import nltk
-import pandas as pd
-import numpy as np
-import re
-import random
-import string 
-import prettytable
-import nltk
-import pickle
-import prettytable
-from collections import defaultdict
-import textblob
-import math
-import re
-from bs4 import BeautifulSoup
-import csv 
 
 from sklearn.pipeline import Pipeline
 from sklearn.decomposition import TruncatedSVD
@@ -63,42 +30,34 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_extraction import text
-
 from nltk.stem.porter import PorterStemmer
 from nltk.stem.snowball import SnowballStemmer
 from nltk.stem.wordnet import WordNetLemmatizer
 from sklearn import decomposition, pipeline, metrics, grid_search
 from nltk.corpus import stopwords
-
 from collections import Counter
-import pickle
-import twitter
-import logging
-import time
 from collections import defaultdict
+from nltk.collocations import *
+from nltk.tokenize import RegexpTokenizer
 
-# Hide some silly output
+# Hide output
 
 import logging
 logging.getLogger("requests").setLevel(logging.WARNING)
 
 
-# Lets load up the Twitter API
-import twitter
-import prettytable
+#load the Twitter API
 
 api = twitter.Api(consumer_key='oBpA2LLQwv90bvMaChYs9o91F',
                 consumer_secret='Jv14NpZ03qx1WQfTPVpzJZf7vP3uipwqtS7OSFXxKmuYQdGhFx',
                 access_token_key='733478864530219008-sh2XNPjVwIt7XVyD0kU9LBJR77R25jw',
                 access_token_secret='z5ktoi3sxHghfyKZxAXQpjkmLYNLTYGoFZIK9q8XCVRTp')
 
-# Grab FAIR's tweet stream
-#
-# NOTE: do not include retweets, too many dupes (though for text analysis this might be a 
-#      way to weigh more heavily text from tweets that are being retweeted by the account)
+# Grab tweet stream
+
 statuses = api.GetUserTimeline(screen_name='@realDonaldTrump', count=10, include_rts=False)
 
-# Create a pretty table of tweet contents and any expanded urls
+# Create a pretty table of tweet contents and  urls
 pt = prettytable.PrettyTable(["Tweet Status", "Expanded URLs"])
 pt.align["Tweet Status"] = "l" # Left align city names
 pt.align["Expanded URLs"] = "l" # Left align city names
@@ -109,12 +68,11 @@ pt.padding_width = 1 # One space between column edges and contents (default)
 for status in statuses:
     pt.add_row([status.text, "".join([url.expanded_url for url in status.urls]) ])
 
-# Lets see the results!
 print pt
 
 allStatuses = pd.read_csv ("Donald.csv",header=0, error_bad_lines =False)
 
-# List of accounts to process, and our results dict
+# List of accounts to process andresults dict
 accounts = ['@realDonaldTrump']
 allStatuses = { }
 
@@ -170,12 +128,6 @@ except Exception as e:
     pickle.dump(content, open("allStatuses", "wb"))
 
 
-import string
-
-import nltk
-from nltk.collocations import *
-from nltk.tokenize import RegexpTokenizer
-from nltk.corpus import stopwords
 
 def preProcess(text):
     text = text.lower()
