@@ -88,16 +88,16 @@ def getFollowers(api, follower):
 ### Twitter API
 
 API_TOKENS = [
-    {"consumer_key": 'yp4wi4FASXbsRKa6JxYqzhUlH',
-    "consumer_secret": 'Wkh1d5ygAOp4Bp65syFzHRN4xQsS8O4FvU3zHWosX8NXCqMpcl',
-    "access_token_key": '16562593-F6lRFe7iyoQEahezhPmaI64oInHZD0LNpcIbbq7Wy',
-    "access_token_secret": 'weregYL8n6DI7yZy9pkizIJ78rH2GY02Do9jvpTe7rCey',
+    {"consumer_key": '',
+    "consumer_secret": '',
+    "access_token_key": '-',
+    "access_token_secret": '',
     "requests_timeout": 60},
 
-    {"consumer_key": 'NsNYFG9LtZV2XMyigPaCKVyVz',
-    "consumer_secret": '4J1vlowybipqXnSrKgLBvmzPmwqx71uHN32noljTgDLS2xQNfI',
-    "access_token_key": '16562593-NCuQWVnpzcnB55w7VLdoCkdobdUQBRDJKjIPXAksP',
-    "access_token_secret": 'nX9OksrYQxj0jBXYJTkUjlX5mZh4rZljfVRXtSM3Tjc8c',
+    {"consumer_key": '',
+    "consumer_secret": '',
+    "access_token_key": '',
+    "access_token_secret": '',
     "requests_timeout": 60}
 ]
 
